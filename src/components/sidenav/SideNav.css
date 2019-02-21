@@ -1,0 +1,225 @@
+.side-menu-list {
+    margin: 0 0 25px;
+}
+
+.side-menu-list .lbl {
+    font-weight: 600;
+    color: #fff;
+    font-size: 1rem;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.side-menu-list ul {
+    display: none;
+}
+
+.side-menu-list ul a {
+    padding-left: 18px;
+}
+
+.side-menu-list .label {
+    margin: 0 0 0 0.5em;
+    font-weight: 400;
+    font-size: 0.75rem;
+    padding: 0.2em 0.45em 0.04em;
+    position: relative;
+    top: -1px;
+}
+
+.side-menu-list > li {
+    line-height: 16px;
+}
+
+.side-menu-list > li.divider {
+    border-top: solid 1px #c5d6de;
+}
+
+.side-menu-list > li.divider:first-child {
+    border-top: none;
+}
+
+.side-menu-list a,
+.side-menu-list li > span {
+    display: block;
+    padding: 11px 10px;
+    position: relative;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-left: solid 4px transparent;
+}
+
+.side-menu-list a:hover,
+.side-menu-list li > span:hover {
+    background-color: #ecf2f5;
+    text-decoration: none;
+}
+
+.side-menu-list a:hover .lbl,
+.side-menu-list li > span:hover .lbl {
+    color: #343434;
+}
+
+.side-menu-list a.label-right,
+.side-menu-list li > span.label-right {
+    padding-right: 38px;
+}
+
+.side-menu-list li.with-sub {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.side-menu-list li.with-sub > span {
+    padding-right: 25px;
+}
+
+.side-menu-list li.with-sub > span:before {
+    content: '';
+    position: absolute;
+    right: 21px;
+    top: 50%;
+    margin-top: -2px;
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 4px 0 4px;
+    border-color: #adb7be transparent transparent transparent;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.side-menu-list li.with-sub li.with-sub > span {
+    padding-left: 19px;
+}
+
+.side-menu-list li.opened > ul {
+    display: block !important;
+}
+
+.side-menu-list .fa,
+.side-menu-list .font-icon,
+.side-menu-list .glyphicon,
+.side-menu-list .tag-color {
+    position: intial;
+    left: 0px;
+    top: 13px;
+    line-height: 16px;
+    font-size: 1.0625rem;
+}
+
+.side-menu-list .fa.active:after,
+.side-menu-list .font-icon.active:after,
+.side-menu-list .glyphicon.active:after,
+.side-menu-list .tag-color.active:after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #fa424a;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: solid 1px #fff;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.side-menu-list .fa {
+    margin-top: -2px;
+}
+
+.side-menu-list .glyphicon {
+    top: 0px;
+    margin-top: -2px;
+}
+.side-menu-list .glyphicon customicon {
+    top: 0 !important;
+    position: inherit !important;
+    left: 0 !important;
+}
+
+.side-menu-list .tag-color {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: #000;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    top: 11px;
+}
+
+.side-menu-big-icon .side-menu-list > li.with-sub > span:after {
+    content: '\52';
+    font-family: startui !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+    position: relative;
+    top: -0.15em;
+    color: #919fa9;
+    opacity: 0.5;
+    position: absolute;
+    right: 10px;
+    top: 19px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.side-menu-big-icon .side-menu-list > li.opened {
+    color: #fff;
+    background-color: #919fa9;
+}
+
+.side-menu-big-icon .side-menu-list > li.opened.with-sub > span:after {
+    color: #fff;
+    opacity: 1;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.side-menu {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #232323;
+    height: 100%;
+    border-right: solid 1px #c5d6de;
+    overflow: auto;
+    z-index: 60;
+    padding: 90px 0 110px;
+}
+
+.side-menu.side-menu-compact .side-menu-list .lbl {
+    display: block;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 1056px) {
+    .side-menu {
+        left: -240px;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+    .menu-left-opened .side-menu {
+        left: 0 !important;
+    }
+    .with-side-menu-addl .side-menu.side-menu-compact {
+        left: -270px;
+    }
+}
